@@ -9,7 +9,7 @@ variable "unzip_command" {
 }
 
 variable "vault_download_url" {
-    default = "https://s3-us-west-2.amazonaws.com/hc-enterprise-binaries/vault/ent/1.0.2/vault-enterprise_1.0.2%2Bent_linux_amd64.zip"
+    default = "https://s3-us-west-2.amazonaws.com/hc-enterprise-binaries/vault/ent/1.1.2/vault-enterprise_1.1.2%2Bent_linux_amd64.zip"
     description = "URL to download Vault"
 
 }
