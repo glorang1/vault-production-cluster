@@ -15,7 +15,7 @@ variable "vault_download_url" {
 }
 
 variable "consul_download_url" {
-    default = "https://s3-us-west-2.amazonaws.com/hc-enterprise-binaries/consul/ent/1.4.2/consul-enterprise_1.4.2%2Bent_linux_amd64.zip"
+    default = "https://s3-us-west-2.amazonaws.com/hc-enterprise-binaries/consul/ent/1.5.0/consul-enterprise_1.5.0%2Bent_linux_amd64.zip"
     description = "URL to download Consul"
 }
 
