@@ -7,7 +7,7 @@ unzip_command = "sudo apt-get install -y curl unzip"
 ami = "ami-0a444079f17309e2a"
 instance_type = "t2.small"
 
-key_name = "glorang-vault"
+key_name = "glorang-ptfe-test"
 vault_name_prefix = "glorang-benchmark-vault"
 consul_name_prefix = "glorang-benchmark-consul"
 vpc_id = "vpc-06e91702c1792261e"
