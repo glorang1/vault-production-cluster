@@ -125,7 +125,7 @@ variable "elb_internal" {
 }
 
 variable "instance_type" {
-    default = "t2.medium"
+    default = "t2.small"
     description = "Instance type for Vault and Consul instances"
 }
 
