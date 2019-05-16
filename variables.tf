@@ -85,7 +85,7 @@ EOF
 
 variable "ami" {
     # Ubuntu 16.04, but could also use ami-059eeca93cf09eebd
-    default = "ami-759bc50a"
+    default = "ami-0a444079f17309e2a"
     description = "AMI for Vault instances"
 }
 
