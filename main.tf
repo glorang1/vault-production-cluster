@@ -93,7 +93,7 @@ resource "aws_autoscaling_group" "consul" {
     desired_capacity = "${var.consul_nodes}"
     health_check_grace_period = 15
     health_check_type = "EC2"
-    vpc_zone_identifier = ["${split(",", var.subnets)}"]
+    vpc_zone_identifier = "${split(",", var.subnets)}"
     load_balancers = ["${aws_elb.consul.id}"]
 
     tags = [
