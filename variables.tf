@@ -105,7 +105,7 @@ variable "consul_name_prefix" {
 }
 
 variable "availability_zones" {
-    default = "us-east-1a,us-east-1b,us-east-1c"
+    default = "us-east-2a,us-east-2b,us-east-2c"
     description = "Availability zones for launching the Vault instances"
 }
 
@@ -125,7 +125,7 @@ variable "elb_internal" {
 }
 
 variable "instance_type" {
-    default = "t2.small"
+    default = "t2.micro"
     description = "Instance type for Vault and Consul instances"
 }
 
