@@ -1,7 +1,7 @@
 data "template_file" "install_vault" {
     template = "${file("${path.module}/scripts/install_vault_server.sh.tpl")}"
 
-    vars {
+    vars = {
         install_unzip       = "${var.unzip_command}"
         vault_download_url  = "${var.vault_download_url}"
         consul_download_url  = "${var.consul_download_url}"
@@ -14,7 +14,7 @@ data "template_file" "install_vault" {
 data "template_file" "install_consul" {
     template = "${file("${path.module}/scripts/install_consul_server.sh.tpl")}"
 
-    vars {
+    vars = {
         install_unzip       = "${var.unzip_command}"
         consul_download_url  = "${var.consul_download_url}"
         consul_config        = "${var.consul_server_config}"
