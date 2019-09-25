@@ -27,13 +27,13 @@ data "template_file" "install_consul" {
 resource "aws_autoscaling_group" "vault" {
     name = "${aws_launch_configuration.vault.name}"
     launch_configuration = "${aws_launch_configuration.vault.name}"
-    availability_zones = ["${split(",", var.availability_zones)}"]
+    availability_zones = "${split(",", var.availability_zones)}"
     min_size = "${var.vault_nodes}"
     max_size = "${var.vault_nodes}"
     desired_capacity = "${var.vault_nodes}"
     health_check_grace_period = 15
     health_check_type = "EC2"
-    vpc_zone_identifier = ["${split(",", var.subnets)}"]
+    vpc_zone_identifier = "${split(",", var.subnets)}"
     load_balancers = ["${aws_elb.vault.id}"]
 
     tags = [
@@ -87,7 +87,7 @@ resource "aws_launch_configuration" "vault" {
 resource "aws_autoscaling_group" "consul" {
     name = "${aws_launch_configuration.consul.name}"
     launch_configuration = "${aws_launch_configuration.consul.name}"
-    availability_zones = ["${split(",", var.availability_zones)}"]
+    availability_zones = "${split(",", var.availability_zones)}"
     min_size = "${var.consul_nodes}"
     max_size = "${var.consul_nodes}"
     desired_capacity = "${var.consul_nodes}"
@@ -333,7 +333,7 @@ resource "aws_elb" "consul" {
     connection_draining = true
     connection_draining_timeout = 400
     internal = "${var.elb_internal}"
-    subnets = ["${split(",", var.subnets)}"]
+    subnets = "${split(",", var.subnets)}"
     security_groups = ["${aws_security_group.vault_elb.id}"]
 
     listener {
