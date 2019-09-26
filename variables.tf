@@ -84,8 +84,8 @@ EOF
 //-------------------------------------------------------------------
 
 variable "ami" {
-    # Ubuntu 16.04, but could also use ami-059eeca93cf09eebd
-    default = "ami-0a444079f17309e2a"
+    # Ubuntu 16.04, but could also use ami-059eeca93cf09eebd HashiStack - ami-0d1262be291f0efc9
+    default = "ami-059eeca93cf09eebd"
     description = "AMI for Vault instances"
 }
 
