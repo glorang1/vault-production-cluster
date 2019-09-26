@@ -90,7 +90,7 @@ variable "ami" {
 }
 
 variable "public_ip" {
-    default = false
+    default = true
     description = "should ec2 instance have public ip?"
 }
 
